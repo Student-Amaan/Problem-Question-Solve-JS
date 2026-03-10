@@ -46,3 +46,17 @@ function removeDuplicateValue(arr) {
 }
 let nmbr = [23, 53, 23, 53, 22, 55, 44, 55, 6, 7, 4, 3];
 console.log(removeDuplicateValue(nmbr));
+
+
+function capatilizeWords(sentence){
+    return sentence
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ")
+}
+
+console.log(
+  capatilizeWords(
+    "My name is aman I am from south waziristan wana do you know me ",
+  ),
+);
