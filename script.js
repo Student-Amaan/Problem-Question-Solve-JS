@@ -60,3 +60,24 @@ console.log(
     "My name is aman I am from south waziristan wana do you know me ",
   ),
 );
+
+
+const user = [
+    { name: "Aman", age: 22 },
+    { name: "Aman", age: 23 },
+    { name: "Aman", age: 24 },
+    { name: "Aman", age: 25 },
+    { name: "Aman", age: 27 },
+];
+
+function groupByUser(users){
+    return users.reduce((groups , user) => {
+        let age = user.age
+        if(!groups[age]){
+            groups[age] = []
+        }
+        groups[age].push(user)
+        return groups
+    },{})
+}
+   console.log(groupByUser(user))
