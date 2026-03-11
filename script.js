@@ -47,12 +47,11 @@ function removeDuplicateValue(arr) {
 let nmbr = [23, 53, 23, 53, 22, 55, 44, 55, 6, 7, 4, 3];
 console.log(removeDuplicateValue(nmbr));
 
-
-function capatilizeWords(sentence){
-    return sentence
+function capatilizeWords(sentence) {
+  return sentence
     .split(" ")
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
 console.log(
@@ -61,33 +60,44 @@ console.log(
   ),
 );
 
-
 const user = [
-    { name: "Aman", age: 22 },
-    { name: "Aman", age: 23 },
-    { name: "Aman", age: 24 },
-    { name: "Aman", age: 24 },
-    { name: "Aman", age: 27 },
+  { name: "Aman", age: 22 },
+  { name: "Aman", age: 23 },
+  { name: "Aman", age: 24 },
+  { name: "Aman", age: 24 },
+  { name: "Aman", age: 27 },
 ];
 
-function groupByUser(users){
-    return users.reduce((groups , user) => {
-        let age = user.age
-        if(!groups[age]){
-            groups[age] = []
-        }
-        groups[age].push(user)
-        return groups
-    },{})
+function groupByUser(users) {
+  return users.reduce((groups, user) => {
+    let age = user.age;
+    if (!groups[age]) {
+      groups[age] = [];
+    }
+    groups[age].push(user);
+    return groups;
+  }, {});
 }
-   console.log(groupByUser(user))
+console.log(groupByUser(user));
 
+// write a function to add all array numbers
 
-   // write a function to add all array numbers
+let nmbr1 = [1, 2, 5, 4, 6, 7];
+function addArray() {
+  return nmbr1.reduce((total, num) => total + num, 0);
+}
 
-   let nmbr1 = [1,2,5,4,6,7]
-   function addArray(){
-    return nmbr1.reduce((total , num)=> total + num , 0)
-   }
+console.log(addArray(nmbr1));
 
-   console.log(addArray(nmbr1));
+function findMissing(arr, n) {
+  let total = (n * (n * 1)) / 2;
+
+  let sum = arr.reduce((value, add) => value + add, 0);
+
+  return total - sum;
+}
+
+let arr = [1, 3, 5, 7, 8, 10];
+let n = 10;
+
+console.log(findMissing(arr, n));
