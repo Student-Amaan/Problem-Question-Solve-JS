@@ -101,3 +101,11 @@ let arr = [1, 3, 5, 7, 8, 10];
 let n = 10;
 
 console.log(findMissing(arr, n));
+
+function flateArray(Array) {
+  return Array.flat(Infinity);
+}
+
+let Array = [1, [2, 3, [4, 5, [6, 7]]]];
+
+console.log(flateArray(Array))
