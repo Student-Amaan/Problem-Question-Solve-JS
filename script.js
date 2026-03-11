@@ -66,7 +66,7 @@ const user = [
     { name: "Aman", age: 22 },
     { name: "Aman", age: 23 },
     { name: "Aman", age: 24 },
-    { name: "Aman", age: 25 },
+    { name: "Aman", age: 24 },
     { name: "Aman", age: 27 },
 ];
 
@@ -81,3 +81,13 @@ function groupByUser(users){
     },{})
 }
    console.log(groupByUser(user))
+
+
+   // write a function to add all array numbers
+
+   let nmbr1 = [1,2,5,4,6,7]
+   function addArray(){
+    return nmbr1.reduce((total , num)=> total + num , 0)
+   }
+
+   console.log(addArray(nmbr1));
