@@ -109,3 +109,24 @@ function flateArray(Array) {
 let Array = [1, [2, 3, [4, 5, [6, 7]]]];
 
 console.log(flateArray(Array))
+
+const someUser = [
+    {name: 'aman', age: 15},
+    {name: 'danish', age: 15},
+    {name: 'waxir', age: 16},
+    {name: 'adocat', age: 16},
+]
+
+function groupArray(arr,property){
+return arr.reduce((acc, obj) =>{
+    let key = obj[property]
+
+    if(!acc[key]){
+        acc[key] = []
+    }
+    acc[key].push(obj)
+    return acc
+}, {});
+}
+
+console.log(groupArray(someUser, 'age'))
